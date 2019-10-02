@@ -2,7 +2,6 @@ import time
 import os
 from selenium import webdriver
 import pyautogui
-import time
 import os
 
 path = os.getcwd()
