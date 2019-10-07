@@ -13,3 +13,7 @@ Harus diedit :
 -tanifund.id harusnya tanifund.com
 -danain harus discroll
 -avantee harus discroll
+
+PELAJARI : 
+
+https://stackoverflow.com/questions/41744368/scrolling-to-element-using-webdriver
