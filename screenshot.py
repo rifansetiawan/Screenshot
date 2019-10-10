@@ -475,7 +475,7 @@ time.sleep(10)
 screenshot = driver.save_screenshot('FolderPNG/danabagus.png')
 time.sleep(2)
 
-driver.get('http://www.lenteradana.co.id/')
+driver.get('https://www.lenteradana.co.id/lender/lender-home')
 time.sleep(10)
 screenshot = driver.save_screenshot('FolderPNG/lenteradana.png')
 time.sleep(2)
