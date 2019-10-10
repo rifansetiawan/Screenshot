@@ -1,10 +1,11 @@
 import time
 import os
+import shutil
 from selenium import webdriver
 import pyautogui
 import os
 from datetime import datetime
-datestring = datetime.strftime(datetime.now(), '%Y-%m-%d-%H:mm:ss')
+datestring = datetime.strftime(datetime.now(), '(%Y-%m-%d)-(%H.%M.ss)')
 
 cwd = os.getcwd()
 DRIVER = 'chromedriver'
@@ -26,6 +27,8 @@ while not os.path.exists(targetPath):
 
 #-----------------------------------------------------------------
 
+
+#------------------------------------------------------------------
 driver = webdriver.Chrome(DRIVER, chrome_options = chrome_options)
 driver.get('https://p2p.danamas.co.id/')
 time.sleep(10)
@@ -520,7 +523,7 @@ time.sleep(10)
 screenshot = driver.save_screenshot('FolderPNG/prosperitree.png')
 time.sleep(2)
 
- driver.get('http://www.danakoo.id/')
+driver.get('http://www.danakoo.id/')
 driver.execute_script("window.scrollTo(0, 1000)") 
 time.sleep(10)
 screenshot = driver.save_screenshot('FolderPNG/danakoo.png')
@@ -675,3 +678,18 @@ driver.get('http://www.uatas.id/')
 time.sleep(10)
 screenshot = driver.save_screenshot('FolderPNG/uatas.png')
 time.sleep(2)
+
+targetPath_PNG = os.path.join("FolderPNG", datestring)
+while not os.path.exists(targetPath_PNG):
+	os.mkdir(targetPath_PNG)
+
+
+cwd = os.getcwd()
+source = cwd+'/FolderPNG/'
+dest1 = targetPath_PNG
+
+
+files = os.listdir(source)
+
+for f in files:
+        shutil.move(source+f, targetPath_PNG)
