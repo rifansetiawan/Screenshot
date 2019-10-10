@@ -485,7 +485,7 @@ time.sleep(10)
 screenshot = driver.save_screenshot('FolderPNG/ikredo.png')
 time.sleep(2)
 
-driver.get('http://www.adakita.co.id/')
+driver.get('https://www.adakita.co.id/')
 time.sleep(10)
 screenshot = driver.save_screenshot('FolderPNG/adakita.png')
 time.sleep(2)
